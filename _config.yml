@@ -17,7 +17,8 @@ theme: "minimal-mistakes-jekyll"
 minimal_mistakes_skin: "default"
 
 # Theme settings/General settings
-url: "https://emilyseville7cfg.github.io/"
+url: "https://billraymond.github.io"
+baseurl: "/EmilySeville7cfg.github.io"
 title: "Emily Grace Seville"
 subtitle: &description "My personal site about DevOps and other interesting things"
 description: *description

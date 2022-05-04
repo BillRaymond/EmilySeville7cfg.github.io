@@ -1,0 +1,19 @@
+{
+    "yaml.schemas": {
+        "_schemas/achievements.json": "_data/achievements.yml",
+        "_schemas/channels.json": "_data/channels.yml",
+        "_schemas/code_extensions.json": "_data/code_extensions.yml",
+        "_schemas/configs.json": "_data/configs.yml",
+        "_schemas/editors.json": "_data/editors.yml",
+        "_schemas/languages.json": "_data/languages.yml",
+        "_schemas/navigation.json": "_data/navigation.yml",
+        "_schemas/organizations.json": "_data/organizations.yml",
+        "_schemas/presentations.json": "_data/presentations.yml",
+        "_schemas/profiles.json": "_data/profiles.yml",
+        "_schemas/text_tutorials.json": "_data/text_tutorials.yml",
+        "_schemas/unused_languages.json": "_data/unused_languages.yml",
+        "_schemas/unused_vcs.json": "_data/unused_vcs.yml",
+        "_schemas/vcs.json": "_data/vcs.yml",
+        "_schemas/vim_extensions.json": "_data/vim_extensions.yml",
+    }
+}

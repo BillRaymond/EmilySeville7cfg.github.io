@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://github.com/EmilySeville7cfg/EmilySeville7cfg.github.io/blob/master/schemas/configs.json#",
+    "description": "Shema for _data/configs.yml",
+    "title": "configs",
+    "type": "array",
+    "items": {
+        "title": "config",
+        "description": "A config",
+        "type": "object",
+        "required": [
+            "name",
+            "application",
+            "url"
+        ],
+        "additionalProperties": false,
+        "properties": {
+            "name": {
+                "description": "A config name",
+                "type": "string",
+                "minLength": 1
+            },
+            "application": {
+                "description": "An application name",
+                "type": "string",
+                "minLength": 1
+            },
+            "url": {
+                "description": "A config url",
+                "type": "string",
+                "minLength": 1
+            },
+            "logo": {
+                "description": "An application logo",
+                "type": "string",
+                "minLength": 1
+            },
+            "visible": {
+                "description": "Specify whether hide a config or not",
+                "type": "boolean",
+                "default": true
+            }
+        }
+    }
+}

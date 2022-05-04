@@ -1,0 +1,41 @@
+name: Continuous Integration
+on:
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+env:
+  CI_HELPERS_PREFIX: ci-helpers
+
+jobs:
+  check-mergeability:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+    - name: check
+      run: |
+        bash $CI_HELPERS_PREFIX/scripts/github_flow/check_mergeability.sh
+
+  yaml-lint:
+    needs: check-mergeability
+    runs-on: ubuntu-20.04
+    
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+    - name: lint
+      run: |
+        pip install --user yamllint
+        shopt -s globstar
+        yamllint --strict --format parsable --config-file $CI_HELPERS_PREFIX/configs/yamllint.yml _data/**/*.yml
+    - name: check format
+      run: |
+        npm install --global ajv-cli
+        for file in _data/*.yml; do
+          file="$(basename "$file" | sed 's/\.yml$//')"
+          env --chdir=_schemas ajv -s "$file.json" -d "../_data/$file.yml"
+        done

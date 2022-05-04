@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://github.com/EmilySeville7cfg/EmilySeville7cfg.github.io/blob/master/schemas/organizations.json#",
+    "description": "Shema for _data/organizations.yml",
+    "title": "organizations",
+    "type": "array",
+    "items": {
+        "title": "organization",
+        "description": "An organization",
+        "type": "object",
+        "required": [
+            "name",
+            "url"
+        ],
+        "properties": {
+            "name": {
+                "description": "An organization name",
+                "type": "string",
+                "minLength": 1,
+                "default": "value"
+            },
+            "url": {
+                "description": "An organization url",
+                "type": "string",
+                "minLength": 1
+            },
+            "visible": {
+                "description": "Specify whether hide an organization or not",
+                "type": "boolean",
+                "default": true
+            }
+        },
+        "additionalProperties": false
+    }
+}

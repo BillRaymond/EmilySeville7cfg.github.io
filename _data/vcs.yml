@@ -1,0 +1,6 @@
+- name: "GitHub"
+  version: "latest"
+  logo: "github"
+- name: "GitHub Actions"
+  version: "latest"
+  logo: "githubactions"

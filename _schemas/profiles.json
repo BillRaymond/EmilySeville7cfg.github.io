@@ -1,0 +1,34 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://github.com/EmilySeville7cfg/EmilySeville7cfg.github.io/blob/master/schemas/extensions.json#",
+    "description": "Shema for _data/extensions.yml",
+    "title": "extensions",
+    "type": "array",
+    "items": {
+        "title": "profile",
+        "description": "A profile",
+        "type": "object",
+        "required": [
+            "name",
+            "url"
+        ],
+        "additionalProperties": false,
+        "properties": {
+            "name": {
+                "description": "A profile name",
+                "type": "string",
+                "minLength": 1
+            },
+            "url": {
+                "description": "A profile url",
+                "type": "string",
+                "minLength": 1
+            },
+            "visible": {
+                "description": "Specify whether hide a profile or not",
+                "type": "boolean",
+                "default": true
+            }
+        }
+    }
+}

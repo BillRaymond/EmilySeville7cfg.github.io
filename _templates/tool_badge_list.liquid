@@ -1,0 +1,18 @@
+{%- comment -%}
+Params:
+- items: item collections displayed
+
+Notes:
+- Each item must have `name` and `version` properties.
+{%- endcomment -%}
+
+{% for item in include.items %}
+    {%- assign visible = true -%}
+    {%- if item.visible == false -%}
+        {%- assign visible = item.visible -%}
+    {%- endif -%}
+    {%- if visible -%}
+        {%- assign hint = item.name | append: "-" | append: item.version -%}
+{%- include_relative _templates/tool_badge.liquid hint=hint logo=item.logo -%}
+    {% endif -%}
+{% endfor -%}

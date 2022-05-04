@@ -1,0 +1,79 @@
+# Plugin list
+plugins:
+- "jekyll-feed"
+- "jemoji"
+
+# Structure
+collections:
+  games:
+    output: true
+    permalink: "/:collection/:name"
+  films:
+    output: true
+    permalink: "/:collection/:name"
+
+# Theme settings
+theme: "minimal-mistakes-jekyll"
+minimal_mistakes_skin: "default"
+
+# Theme settings/General settings
+url: "https://emilyseville7cfg.github.io/"
+title: "Emily Grace Seville"
+subtitle: &description "My personal site about DevOps and other interesting things"
+description: *description
+repository: "EmilySeville7cfg/EmilySeville7cfg.github.io"
+logo: "/images/avatar.png"
+name: "Emily Grace Seville"
+search: true
+
+# Theme settings/Author settings
+author:
+  name: "Emily Grace Seville"
+  avatar: "/images/round-avatar.png"
+  bio: "🌍 Open-source contributor && ⚧ Transgender girl"
+  location: "Canada, Toronto"
+  links:
+  - label: "GitHub"
+    icon: "fab fa-fw fa-github"
+    url: "https://github.com/EmilySeville7cfg"
+  - label: "Telegram"
+    url: "https://t.me/emilyseville7cfg"
+
+# Theme settings/Footer settings
+footer:
+  links:
+  - label: "GitHub"
+    icon: "fab fa-fw fa-github"
+    url: "https://github.com/EmilySeville7cfg"
+  - label: "Telegram"
+    url: "https://t.me/emilyseville7cfg"
+
+# Theme settings/Post settings
+date_format: "[ %d / %B / %Y ]"
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "emilyseville7cfg"
+defaults:
+- scope:
+    path: ""
+    type: "posts"
+  values:
+    show_date: true
+    read_time: true
+    comments: true
+    toc: true
+    sidebar:
+      nav: "docs"
+- scope:
+    path: ""
+    type: "pages"
+  values:
+    comments: true
+    toc: true
+    sidebar:
+      nav: "docs"
+
+# Theme settings/Atom feed
+atom_feed:
+  hide: true

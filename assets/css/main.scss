@@ -1,0 +1,97 @@
+---
+---
+
+$background-color: white !default;
+$text-color: rgb(54, 14, 87) !default;
+$muted-text-color: rgb(41, 10, 67) !default;
+$primary-color: rgb(88, 21, 143) !default;
+$border-color: rgba(140, 0, 183, 0.092);
+$footer-background-color: white !default;
+$link-color: #6000cd !default;
+$masthead-link-color: $text-color !default;
+$masthead-link-color-hover: $text-color !default;
+$navicon-link-color-hover: mix(rgb(0, 0, 0), $text-color, 50%) !default;
+
+.page__footer {
+    color: rgb(255, 255, 255) !important; // override
+    background-color: rgb(88, 21, 143) !important;
+}
+
+.page__footer-follow .social-icons .svg-inline--fa {
+    color: white !important;
+}
+
+$base00: #371731;
+$base01: #302b25;
+$base02: #48413a;
+$base03: #9d8b70;
+$base04: #b4a490;
+$base05: #cabcb1;
+$base06: #d7c8bc;
+$base07: #e4d4c8;
+$base08: #d35c5c;
+$base09: #ca7f32;
+$base0a: #e0ac16;
+$base0b: #b7ba53;
+$base0c: #6eb958;
+$base0d: #88a4d3;
+$base0e: #bb90e2;
+$base0f: #b49368;
+
+table {
+    display: block;
+    margin-bottom: 1em;
+    width: 100%;
+
+    color: rgb(88, 21, 143);
+    border: 2px solid #58158f;
+    border-collapse: collapse;
+
+    &+table {
+        margin-top: 1em;
+    }
+}
+
+table tr:nth-child(odd) td{
+    background-color: rgb(255, 255, 255);
+    color: rgb(88, 21, 143);
+}
+table tr:nth-child(even) td{
+    background-color: rgba(88, 21, 143, 0.197);
+    color: rgb(88, 21, 143);
+}
+
+tr:first-child {
+    background: rgb(88, 21, 143);
+    color: white;
+}
+
+thead {
+    background-color: $border-color;
+    border: none !important;
+}
+
+th {
+    width: 50%;
+    padding: 0.5em;
+    font-weight: bold;
+    text-align: left;
+    border: none !important;
+}
+
+td {
+    padding: 0.5em;
+    border: none;
+    border: none !important;
+}
+
+tr,
+td,
+th {
+    vertical-align: middle;
+}
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";

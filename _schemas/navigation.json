@@ -1,0 +1,83 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://github.com/EmilySeville7cfg/EmilySeville7cfg.github.io/blob/master/schemas/achievements.json#",
+    "description": "Shema for _data/achievements.yml",
+    "title": "navigation",
+    "type": "object",
+    "properties": {
+        "docs": {
+            "description": "Navigation items",
+            "type": "array",
+            "items": {
+                "description": "A navigation item",
+                "type": "object",
+                "oneOf": [
+                    {
+                        "title": "complex navigation item",
+                        "type": "object",
+                        "required": [
+                            "title",
+                            "children"
+                        ],
+                        "properties": {
+                            "title": {
+                                "description": "A navigation item name",
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "children": {
+                                "description": "Children items",
+                                "type": "array",
+                                "items": {
+                                    "title": "child item",
+                                    "description": "A child item",
+                                    "type": "object",
+                                    "required": [
+                                        "title",
+                                        "url"
+                                    ],
+                                    "properties": {
+                                        "title": {
+                                            "description": "A child item name",
+                                            "type": "string",
+                                            "minLength": 1
+                                        },
+                                        "url": {
+                                            "description": "A child item url",
+                                            "type": "string",
+                                            "minLength": 1
+                                        }
+                                    },
+                                    "additionalProperties": false
+                                }
+                            }
+                        },
+                        "additionalProperties": false
+                    },
+                    {
+                        "title": "navigation item",
+                        "type": "object",
+                        "required": [
+                            "title",
+                            "url"
+                        ],
+                        "properties": {
+                            "title": {
+                                "description": "A navigation item name",
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "url": {
+                                "description": "A navigation item url",
+                                "type": "string",
+                                "minLength": 1
+                            }
+                        },
+                        "additionalProperties": false
+                    }
+                ]
+            }
+        }
+    },
+    "additionalProperties": false
+}

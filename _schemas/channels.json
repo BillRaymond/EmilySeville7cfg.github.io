@@ -1,0 +1,34 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://github.com/EmilySeville7cfg/EmilySeville7cfg.github.io/blob/master/schemas/channels.json#",
+    "description": "Shema for _data/channels.yml",
+    "title": "channels",
+    "type": "array",
+    "items": {
+        "title": "channel",
+        "description": "A channel",
+        "type": "object",
+        "required": [
+            "name",
+            "url"
+        ],
+        "additionalProperties": false,
+        "properties": {
+            "name": {
+                "description": "A channel name",
+                "type": "string",
+                "minLength": 1
+            },
+            "url": {
+                "description": "A channel url",
+                "type": "string",
+                "minLength": 1
+            },
+            "visible": {
+                "description": "Specify whether hide a channel or not",
+                "type": "boolean",
+                "default": true
+            }
+        }
+    }
+}

@@ -1,0 +1,6 @@
+- name: "GitLab"
+  version: "14.6"
+  logo: "gitlab"
+- name: "GitLab CI"
+  version: "14.6"
+  logo: "gitlab"

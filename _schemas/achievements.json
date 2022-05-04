@@ -1,0 +1,34 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://github.com/EmilySeville7cfg/EmilySeville7cfg.github.io/blob/master/schemas/achievements.json#",
+    "description": "Shema for _data/achievements.yml",
+    "title": "achievements",
+    "type": "array",
+    "items": {
+        "title": "achievement",
+        "description": "An achievement",
+        "type": "object",
+        "required": [
+            "description",
+            "date"
+        ],
+        "properties": {
+            "description": {
+                "description": "An achievement description",
+                "type": "string",
+                "minLength": 1
+            },
+            "date": {
+                "description": "An achievement date",
+                "type": "string",
+                "minLength": 1
+            },
+            "visible": {
+                "description": "Specify whether hide an achievement or not",
+                "type": "boolean",
+                "default": true
+            }
+        },
+        "additionalProperties": false
+    }
+}

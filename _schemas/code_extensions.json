@@ -1,0 +1,34 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://github.com/EmilySeville7cfg/EmilySeville7cfg.github.io/blob/master/schemas/code_extensions.json#",
+    "description": "Shema for _data/code_extensions.yml",
+    "title": "extensions",
+    "type": "array",
+    "items": {
+        "title": "extension",
+        "description": "An extension",
+        "type": "object",
+        "required": [
+            "name",
+            "url"
+        ],
+        "properties": {
+            "name": {
+                "description": "An extension name",
+                "type": "string",
+                "minLength": 1
+            },
+            "url": {
+                "description": "An extension repository url",
+                "type": "string",
+                "minLength": 1
+            },
+            "visible": {
+                "description": "Specify whether hide an editor or not",
+                "type": "boolean",
+                "default": true
+            }
+        },
+        "additionalProperties": false
+    }
+}

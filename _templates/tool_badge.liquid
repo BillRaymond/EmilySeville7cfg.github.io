@@ -1,0 +1,15 @@
+{%- comment -%}
+Params:
+- hint: text displayed in a badge
+- logo: logo displayed in a badge
+{%- endcomment -%}
+
+{% assign left_color = "58158f" -%}
+{%- assign right_color = "000000" -%}
+{%- assign logo_color = "e9e0ff" -%}
+
+{%- assign params = "" -%}
+{%- if include.logo -%}
+    {%- assign params = params | append: "&logo=" | append: include.logo | append: "&logoColor=" | append: logo_color -%}
+{%- endif -%}
+![{{ include.hint }}](https://img.shields.io/badge/{{ include.hint | escape }}-{{ right_color }}?labelColor={{ left_color }}{{ params }})

@@ -1,0 +1,23 @@
+docs:
+  - title: "Me as a DevOps"
+    children:
+      - title: "About me"
+        url: "/about/"
+      - title: "Profiles"
+        url: "/profiles/"
+      - title: "Learning"
+        url: "/learning/"
+      - title: "Environment"
+        url: "/environment/"
+  - title: "Me as a gamer"
+    children:
+      - title: "Games"
+        url: "/games/"
+  - title: "Me as a film fan"
+    children:
+      - title: "Films"
+        url: "/films/"
+  - title: "Me as a shopaholic"
+    children:
+      - title: "Clothes"
+        url: "/clothes/"

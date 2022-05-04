@@ -1,0 +1,7 @@
+{% for music in site.static_files %}
+    {% if music.path contains page.background_music %}
+> {{ music.name | remove: ".mp3" }}
+<embed name="Background music" src="{{ music.path }}" loop="true" hidden="true" autostart="true">
+        {% break %}
+    {% endif %}
+{% endfor %}

@@ -1,0 +1,18 @@
+{%- comment -%}
+Params:
+- items: item collections displayed
+
+Notes:
+- Each item must have `name` and `url` properties.
+{%- endcomment -%}
+
+{% for item in include.items %}
+    {%- assign visible = true -%}
+    {%- if item.visible == false -%}
+        {%- assign visible = item.visible -%}
+    {%- endif -%}
+    {%- if visible -%}
+- [{{ item.name }}]({{ item.url }})
+    {%- endif %}
+{% endfor %}
+

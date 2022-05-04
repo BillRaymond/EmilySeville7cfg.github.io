@@ -1,0 +1,41 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://github.com/EmilySeville7cfg/EmilySeville7cfg.github.io/blob/master/schemas/languages.json#",
+    "description": "Shema for _data/languages.yml",
+    "title": "languages",
+    "type": "array",
+    "items": {
+        "title": "language",
+        "description": "A language",
+        "type": "object",
+        "required": [
+            "name",
+            "version"
+        ],
+        "properties": {
+            "name": {
+                "description": "A language name",
+                "type": "string",
+                "minLength": 1
+            },
+            "version": {
+                "description": "A language version",
+                "type": "string",
+                "examples": [
+                    "latest"
+                ]
+            },
+            "logo": {
+                "description": "A language logo",
+                "type": "string",
+                "minLength": 1
+            },
+            "visible": {
+                "description": "Specify whether hide a language or not",
+                "type": "boolean",
+                "default": true
+            }
+        },
+        "additionalProperties": false
+    }
+}
